@@ -1,0 +1,22 @@
+{
+  "name": "simple-react-express-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/superkarolis/simple-react-express-starter.git",
+  "author": "Karolis Ramanauskas <hello@karolisram.com>",
+  "license": "MIT",
+  "scripts": {
+    "server": "yarn --cwd server start",
+    "client": "yarn --cwd client start",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "start": "yarn run server",
+    "heroku-postbuild": "cd client && yarn install && yarn run build"
+  },
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  },
+  "engines": {
+    "node": "10.12.0",
+    "yarn": "1.10.1"
+  }
+}
